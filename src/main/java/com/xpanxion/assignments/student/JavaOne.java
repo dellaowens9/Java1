@@ -1,5 +1,5 @@
 package com.xpanxion.assignments.student;
-
+import java.util.Scanner; 
 public class JavaOne {
 
     //
@@ -13,7 +13,13 @@ public class JavaOne {
     //
 
     public void ex1() {
-        System.out.println("Student 1: ex1.");
+        String userInput; 
+        Scanner console = new Scanner(System.in); 
+        System.out.print("Enter a first and last name: ");
+        userInput = console.nextLine(); 
+        userInput = userInput.toUpperCase(); 
+
+        System.out.println(userInput); 
     }
 
     public void ex2() {
