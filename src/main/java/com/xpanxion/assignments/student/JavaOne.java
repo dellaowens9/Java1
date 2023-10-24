@@ -16,6 +16,7 @@ public class JavaOne {
         String userInput; 
         Scanner console = new Scanner(System.in); 
         System.out.print("Enter a first and last name: ");
+
         userInput = console.nextLine(); 
         userInput = userInput.toUpperCase(); 
 
@@ -23,7 +24,32 @@ public class JavaOne {
     }
 
     public void ex2() {
-        System.out.println("Student 1: ex2.");
+        String test1 = "This is a Test"; 
+        String test2 = "nothing to see here";
+
+        test1.split(""); 
+        test2.split(""); 
+
+        int count = 0; 
+        for (int i = 0; i < test1.length(); i++){
+            char letter = test1.charAt(i); 
+            if (letter >= 'A' && letter <='Z'){
+                count+= 1;
+            }
+        }
+        int count2 = 0; 
+        for (int j = 0; j < test1.length(); j++){
+            char letter = test2.charAt(j); 
+            if (letter >= 'A' && letter <= 'Z'){
+                count2 += 1; 
+            }
+        }
+
+        System.out.println("Test 1: " + test1); 
+        System.out.println("Number of uppercase letters: " + count);
+
+        System.out.println("Test 2: " + test2);
+        System.out.println("Number of uppercase letters: " + count2);
     }
 
     public void ex3() {
