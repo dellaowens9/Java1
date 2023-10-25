@@ -91,7 +91,50 @@ public class JavaOne {
     }
 
     public void ex5() {
-        System.out.println("Student 1: ex5.");
+
+        String userInput;
+        String inputString = "";  
+        Scanner console = new Scanner(System.in); 
+        System.out.print("Enter a string: ");
+        userInput = console.nextLine().toLowerCase(); 
+        inputString = userInput; 
+        userInput.split(""); 
+        
+
+        int count = 0; 
+        int constanceCount = 0; 
+        while (true){
+            System.out.println("Input string: "+ inputString); 
+            if (inputString.equals("quit")){
+                break; 
+            }
+           
+            for (int i = 0; i < userInput.length(); i++){
+                char letter = userInput.charAt(i); 
+                if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u'){
+                count+= 1;
+                }
+                else if (letter == '.' || letter == ' '){
+                    continue;  
+                }
+                else{
+                    constanceCount += 1;
+                }
+            }
+        
+        System.out.println("Number of vowels: " + count); 
+        System.out.println("Number of contants: " + constanceCount);
+        
+        count = 0; 
+        constanceCount = 0; 
+        inputString = "";  
+        System.out.print("Enter a string: ");
+        userInput = console.nextLine().toLowerCase(); 
+        inputString = userInput; 
+        userInput.split("");         
+        }
+        
+        
     }
 
     public void ex6() {
