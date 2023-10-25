@@ -53,7 +53,26 @@ public class JavaOne {
     }
 
     public void ex3() {
-        System.out.println("Student 1: ex3.");
+        String userInput; 
+        Scanner console = new Scanner(System.in); 
+        System.out.print("Enter a sentence ");
+        userInput = console.nextLine(); 
+
+        String []splitInput = userInput.split(" "); 
+
+        for (int i = 0; i < splitInput.length; i++){
+            if (i == 0 || i % 2 == 0){
+                splitInput[i] = splitInput[i].toUpperCase(); 
+            }
+        }
+
+        String finalString = ""; 
+
+        for (int j = 0; j < splitInput.length; j++){
+            finalString += splitInput[j] + " "; 
+        }
+
+        System.out.println(finalString); 
     }
 
     public void ex4() {
