@@ -1,5 +1,7 @@
 package com.xpanxion.assignments.student;
 import java.util.Scanner; 
+
+
 public class JavaOne {
 
     //
@@ -76,7 +78,16 @@ public class JavaOne {
     }
 
     public void ex4() {
-        System.out.println("Student 1: ex4.");
+        StringBuilder word1 = new StringBuilder("racecar");
+        StringBuilder rev1 = new StringBuilder(word1.reverse()); 
+        String stringWord1 = word1.toString(); 
+        System.out.println(stringWord1.equals(rev1.toString())); 
+
+        StringBuilder word2 = new StringBuilder("cat");
+        StringBuilder rev2 = new StringBuilder(word1.reverse()); 
+        String stringWord2 = word2.toString(); 
+        System.out.println(stringWord2.equals(rev2.toString())); 
+       
     }
 
     public void ex5() {
