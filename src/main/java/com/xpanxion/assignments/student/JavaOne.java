@@ -149,7 +149,37 @@ public class JavaOne {
     }
 
     public void ex7() {
-        System.out.println("Student 1: ex7.");
+        int userInputA, userInputB;
+        int total = 0; 
+        Scanner console = new Scanner(System.in); 
+        Scanner stringConsole = new Scanner(System.in); 
+        System.out.print("Enter number A: ");
+        userInputA = console.nextInt(); 
+
+        System.out.print("Enter number B: ");
+        userInputB = console.nextInt(); 
+
+        String calcMethod; 
+        System.out.print("Enter operation (add, sub, mul, div): "); 
+        calcMethod = stringConsole.nextLine(); 
+
+        if (calcMethod.equals("add")){
+            total = userInputA + userInputB; 
+            System.out.println("Result: " + total);
+        }
+        else if (calcMethod.equals("div")){
+            total = userInputA / userInputB; 
+            System.out.println("Result: " + total); 
+        }
+        else if (calcMethod.equals("sub")){
+            total = userInputA - userInputB; 
+            System.out.println("Result: " + total); 
+        }
+        else if (calcMethod.equals("mul")){
+            total = userInputA * userInputB; 
+            System.out.println("Result: " + total); 
+        }
+
     }
 
     public void ex8() {
