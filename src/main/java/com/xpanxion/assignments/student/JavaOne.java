@@ -104,7 +104,6 @@ public class JavaOne {
         int count = 0; 
         int constanceCount = 0; 
         while (true){
-            System.out.println("Input string: "+ inputString); 
             if (inputString.equals("quit")){
                 break; 
             }
@@ -133,12 +132,20 @@ public class JavaOne {
         inputString = userInput; 
         userInput.split("");         
         }
-        
-        
     }
 
     public void ex6() {
-        System.out.println("Student 1: ex6.");
+        int userInputA, userInputB;
+        Scanner console = new Scanner(System.in); 
+        System.out.print("Enter number A: ");
+        userInputA = console.nextInt(); 
+
+        System.out.print("Enter number B: ");
+        userInputB = console.nextInt(); 
+
+        int total = userInputA + userInputB; 
+
+        System.out.println("Total: " + total);  
     }
 
     public void ex7() {
