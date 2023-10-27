@@ -1,5 +1,6 @@
 package com.xpanxion.assignments.student;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Person {
@@ -8,7 +9,7 @@ public class Person {
     String firstName;
     String lastName; 
 
-    public Person() {}; 
+
 
     public Person(int id, String firstName, String lastName){
         this.firstName = firstName; 
@@ -54,9 +55,27 @@ public class Person {
     }
 
     public static void main(String []args){
-        var bestList = new ArrayList<Person>(); 
-        Person personA = new Person(1, "John", "Smith"); 
-        personA.PersonList(personA);
+        
+        HashMap<Integer, Person> personDictionary = new HashMap<Integer, Person>();
+        var person1 = new Person(1, "Peter", "Jones"); 
+        var person2 = new Person(2, "John", "Smith"); 
+        var person3 = new Person(3, "Mary", "Jane"); 
+
+        personDictionary.put(1, person1);
+        personDictionary.put(2, person2);
+        personDictionary.put(3, person3);
+
+        int userInput; 
+        Scanner console = new Scanner(System.in); 
+        System.out.print("Enter Person ID: ");
+        userInput = console.nextInt();
+
+        var findPerson = personDictionary.get(userInput); 
+        System.out.println(findPerson.toString()); 
+
+
+
+
     }
     
 }
