@@ -21,7 +21,7 @@ public class JavaOne {
 
         userInput = console.nextLine(); 
         userInput = userInput.toUpperCase(); 
-
+        console.close();
         System.out.println(userInput); 
     }
 
